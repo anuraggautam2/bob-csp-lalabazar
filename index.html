@@ -1,10 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>bob csp lalabazar</title>
+  <meta charset="UTF-8">
+  <title>BoB CSP Lalabazar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+    }
+    header {
+      background: #f26722;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      margin: 15px;
+      background: white;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #f26722;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 15px;
+      color: #555;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Website is working ✅</h1>
-  <p>bob csp lalabazar</p>
+
+<header>
+  <h1>Bank of Baroda CSP</h1>
+  <p><strong>bob csp lalabazar</strong></p>
+  <p>Authorized Customer Service Point</p>
+</header>
+
+<section>
+  <h2>🏦 About Us</h2>
+  <p>
+    We are an <strong>Authorized Bank of Baroda CSP</strong> providing
+    banking and financial services to local customers in a safe,
+    trusted, and transparent manner.
+  </p>
+</section>
+
+<section>
+  <h2>🛠️ Our Services</h2>
+  <ul>
+    <li>AEPS Cash Withdrawal</li>
+    <li>AEPS Balance Enquiry</li>
+    <li>Aadhaar Related Services</li>
+    <li>Money Transfer (DMT)</li>
+    <li>Bank Account Opening</li>
+    <li>Electricity / Gas Bill Payment</li>
+    <li>Mobile & DTH Recharge (Jio / Airtel)</li>
+    <li>Photostat & Lamination</li>
+  </ul>
+</section>
+
+<section>
+  <h2>📅 Book Appointment (WhatsApp)</h2>
+
+  <input type="text" id="name" placeholder="Your Name" required>
+
+  <select id="service">
+    <option>AEPS Service</option>
+    <option>Aadhaar Service</option>
+    <option>Account Opening</option>
+    <option>Money Transfer</option>
+    <option>Recharge / Bill Payment</option>
+    <option>Other Service</option>
+  </select>
+
+  <input type="date" id="date">
+  <input type="time" id="time">
+
+  <button onclick="sendWhatsApp()">Book on WhatsApp</button>
+</section>
+
+<section>
+  <h2>📍 Our Location</h2>
+  <iframe
+    src="https://www.google.com/maps?q=bob%20csp%20lalabazar&output=embed">
+  </iframe>
+</section>
+
+<section>
+  <h2>📞 Contact</h2>
+  <p><strong>WhatsApp:</strong> 8601174603</p>
+  <a class="btn" href="https://wa.me/918601174603" target="_blank">
+    Chat on WhatsApp
+  </a>
+</section>
+
+<section>
+  <h2>⚠️ Disclaimer</h2>
+  <p>
+    All services are provided as an <strong>authorized Bank of Baroda CSP</strong>.
+    Aadhaar and AEPS services are offered strictly as per
+    <strong>RBI & NPCI guidelines</strong>.
+    No customer data is stored online.
+  </p>
+</section>
+
+<footer>
+  © 2025 bob csp lalabazar | Authorized BoB CSP
+</footer>
+
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+
+  if (!name) {
+    alert("Please enter your name");
+    return;
+  }
+
+  const phone = "918601174603";
+  const message =
+    "Hello,%0A" +
+    "Name: " + name + "%0A" +
+    "Service: " + service + "%0A" +
+    "Preferred Date: " + date + "%0A" +
+    "Preferred Time: " + time + "%0A" +
+    "Shop: bob csp lalabazar";
+
+  window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+}
+</script>
+
 </body>
 </html>
